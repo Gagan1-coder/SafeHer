@@ -1,0 +1,14 @@
+{
+  "name": "safeher-frontend",
+  "version": "1.0.0",
+  "description": "SafeHer Frontend Web Application",
+  "scripts": {
+    "dev": "npm run dev --prefix ../saheli_web",
+    "build": "npm run build --prefix ../saheli_web",
+    "start": "npm run start --prefix ../saheli_web",
+    "lint": "npm run lint --prefix ../saheli_web"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

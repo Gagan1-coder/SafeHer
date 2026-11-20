@@ -8,7 +8,8 @@ router.get('/', async (req, res) => {
     const users = await User.getAllUsers();
     res.status(200).json(users);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error("Error in GET /users:", error.message);
+    res.status(500).json({ error: 'Failed to retrieve users', details: error.message });
   }
 });
 
@@ -22,7 +23,8 @@ router.get('/:userId', async (req, res) => {
     }
     res.status(200).json(user);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error(`Error in GET /users/${userId}:`, error.message);
+    res.status(500).json({ error: 'Failed to retrieve user', details: error.message });
   }
 });
 
@@ -33,7 +35,8 @@ router.post('/', async (req, res) => {
     const newUser = await User.createUser(userData);
     res.status(201).json(newUser);
   } catch (error) {
-    res.status(400).json({ error: 'Bad Request' });
+    console.error("Error in POST /users:", error.message);
+    res.status(400).json({ error: 'Failed to create user', details: error.message });
   }
 });
 
@@ -48,7 +51,8 @@ router.put('/:userId', async (req, res) => {
     }
     res.status(200).json(updatedUser);
   } catch (error) {
-    res.status(400).json({ error: 'Bad Request' });
+    console.error(`Error in PUT /users/${userId}:`, error.message);
+    res.status(400).json({ error: 'Failed to update user', details: error.message });
   }
 });
 
@@ -59,7 +63,8 @@ router.delete('/:userId', async (req, res) => {
     await User.deleteUserById(userId);
     res.status(200).json({ message: 'User deleted successfully' });
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error(`Error in DELETE /users/${userId}:`, error.message);
+    res.status(500).json({ error: 'Failed to delete user', details: error.message });
   }
 });
 

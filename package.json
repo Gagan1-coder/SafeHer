@@ -1,0 +1,25 @@
+{
+  "name": "safeher",
+  "version": "1.0.0",
+  "description": "SafeHer – Your Ultimate Safety Companion",
+  "main": "backend/index.js",
+  "scripts": {
+    "dev": "concurrently -k -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix saheli_web",
+    "start": "concurrently -k -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" \"npm start --prefix backend\" \"npm start --prefix saheli_web\"",
+    "build": "npm run build --prefix saheli_web",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix saheli_web"
+  },
+  "keywords": [
+    "safety",
+    "women-safety",
+    "safeher",
+    "saheli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
