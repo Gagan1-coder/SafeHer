@@ -38,6 +38,15 @@ SafeHer aims to contribute to a safer environment for women through technology a
 
 ## How to Run the Frontend (Flutter)
 
+### Prerequisites
+
+- Flutter SDK
+- Dart SDK (included with Flutter)
+- Android Studio or VS Code
+- Android device or emulator
+
+### Installation Steps
+
 1. Clone the repository:
 
    ```bash
@@ -50,7 +59,7 @@ SafeHer aims to contribute to a safer environment for women through technology a
    cd SafeHer/frontend/saheli_app
    ```
 
-3. If the project uses a local `audioplayers` package, download it from [audioplayers GitHub](https://github.com/bluefireteam/audioplayers/tree/master/packages/audioplayers) and configure its local path in `pubspec.yaml`.
+3. If the project uses a local `audioplayers` package, download it from [audioplayers GitHub](https://github.com/bluefireteam/audioplayers/tree/master/packages/audioplayers) and configure its local path in `pubspec.yaml`, if required.
 
 4. Fetch Flutter dependencies:
 
@@ -68,7 +77,16 @@ SafeHer aims to contribute to a safer environment for women through technology a
 
 ## How to Run the Backend (Node.js)
 
-1. Clone the repository:
+### Prerequisites
+
+- Node.js
+- npm
+- Firebase project and valid credentials
+- Required API keys
+
+### Installation Steps
+
+1. Clone the repository (skip this step if you already cloned it):
 
    ```bash
    git clone https://github.com/Gagan1-coder/SafeHer.git
@@ -95,7 +113,9 @@ SafeHer aims to contribute to a safer environment for women through technology a
    PORT=8080
    ```
 
-5. Start the backend:
+5. Configure Firebase credentials according to the backend configuration. Do not upload private service-account credentials or API secrets to GitHub.
+
+6. Start the backend:
 
    ```bash
    npm start
@@ -120,7 +140,19 @@ SafeHer aims to contribute to a safer environment for women through technology a
 
 ## Application Images
 
-Upload your own SafeHer screenshots into the `screenshots` folder in your GitHub repository.
+Add your SafeHer application screenshots to the `screenshots` folder in the root directory of your GitHub repository.
+
+The folder should contain these six image files:
+
+```text
+screenshots/
+├── screenshot1.png
+├── screenshot2.png
+├── screenshot3.png
+├── screenshot4.png
+├── screenshot5.png
+└── screenshot6.png
+```
 
 <div align="center">
   <img src="screenshots/screenshot1.png" width="30%" alt="SafeHer Screenshot 1" />
@@ -167,15 +199,13 @@ Upload your own SafeHer screenshots into the `screenshots` folder in your GitHub
 
 ## How to Contribute
 
-Contributions to SafeHer are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to submit a pull request.
+Contributions to SafeHer are welcome!
 
-## About the Original Development Team
+If you have ideas for new features, improvements, or bug fixes, feel free to contribute.
 
-- [Apoorv Yash](https://www.linkedin.com/in/apoorv-yash-75b130230/)
-- [Priyanshu Agrawal](https://www.linkedin.com/in/priyanshu-agrawal-5a00651b1/)
-- [Yuvraj Singh](https://www.linkedin.com/in/yuvraj-singh-5198441aa/)
-- [Agrim Saxena](https://www.linkedin.com/in/agrim-saxena-29529b223/)
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+1. Fork this repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes.
+4. Commit your changes.
+5. Push your branch.
+6. Submit a pull request.
